@@ -7,7 +7,9 @@ import java.io.InputStream;
 
 public class Main {
     public static void main(String[] args) {
-        try (FileInputStream file = new FileInputStream("D:\\taofile\\txt.txt")) {
+        String filecha = "D:\\taofile\\txt.txt";
+        String filecon = "D\\taofile";
+        try (FileInputStream file = new FileInputStream(filecha)) {
             try (BufferedReader br = new BufferedReader(new InputStreamReader(file))) {
                 String line;
 
@@ -28,7 +30,7 @@ public class Main {
 
                         tentep = tentep.replaceAll("[\\\\/:*?\"<>|]", "");
                         System.out.println(tentep);
-                        File rootFolder = new File("D:\\taofile\\" + tentep);
+                        File rootFolder = new File(filecon + tentep);
 
                         if (!rootFolder.exists()) {
                             boolean created = rootFolder.mkdirs(); 
