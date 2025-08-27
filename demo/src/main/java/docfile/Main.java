@@ -26,8 +26,8 @@ public class Main {
                         String maNV = arr[4].trim();
                         String tentep = ten + "_" + maNV;
 
-                        System.out.println(tentep);
                         tentep = tentep.replaceAll("[\\\\/:*?\"<>|]", "");
+                        System.out.println(tentep);
                         File rootFolder = new File("D:\\taofile\\" + tentep);
 
                         if (!rootFolder.exists()) {
