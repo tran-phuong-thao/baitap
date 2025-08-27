@@ -16,13 +16,14 @@ public class Main {
                 line = br.readLine();
                 while ((line = br.readLine()) != null){
                     String[] arr = line.split(",");
-                    if (arr.length<7){
+                    System.out.println("so cot:" + arr.length);
+                    if (arr.length<5){
                          System.out.println("ko du thong tin");
                         }
                     else {
-                        String ten = arr[2].trim();
-                        String mavn = arr[6].trim();
-                        System.out.println(ten + mavn);
+                        String ten = arr[1].trim();
+                        String mavn = arr[4].trim();
+                        System.out.println(ten +" "+ mavn);
                     }
                 }
             }
