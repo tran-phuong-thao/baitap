@@ -13,9 +13,17 @@ public class Main {
             try ( BufferedReader br = new BufferedReader(new InputStreamReader(file)))
             {
                 String line;
+                line = br.readLine();
                 while ((line = br.readLine()) != null){
-                    
-                    System.out.println(line);
+                    String[] arr = line.split(",");
+                    if (arr.length<7){
+                         System.out.println("ko du thong tin");
+                        }
+                    else {
+                        String ten = arr[2].trim();
+                        String mavn = arr[6].trim();
+                        System.out.println(ten + mavn);
+                    }
                 }
             }
         } catch (IOException e) {
