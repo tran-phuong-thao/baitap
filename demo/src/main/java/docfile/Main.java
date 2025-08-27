@@ -1,6 +1,9 @@
 package docfile;
 
 import java.io.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
 
 public class Main {
     public static void main(String[] args) {
@@ -24,13 +27,13 @@ public class Main {
                         String tentep = ten + "_" + maNV;
 
                         System.out.println(tentep);
-
+                        tentep = tentep.replaceAll("[\\\\/:*?\"<>|]", "");
                         File rootFolder = new File("D:\\taofile\\" + tentep);
 
                         if (!rootFolder.exists()) {
                             boolean created = rootFolder.mkdirs(); 
                             if (created) {
-                                 rootFolder.getAbsolutePath();
+                                 System.out.println("Tao thanh cong: " +rootFolder.getAbsolutePath());
                             } else {
                                 System.out.println("loi ko tao duoc");
                             }
